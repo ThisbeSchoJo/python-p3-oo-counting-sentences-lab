@@ -19,6 +19,7 @@ class TestMyString:
         sys.stdout = captured_out
         string = MyString()
         string.value = 123
+        string.count_sentences()
         sys.stdout = sys.__stdout__
         assert(captured_out.getvalue() == "The value must be a string.\n")
 
